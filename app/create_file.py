@@ -9,20 +9,20 @@ def create_file() -> None:
     dirs = []
     file_name = None
 
-    i = 0
-    while i < len(args):
-        if args[i] == "-d":
-            i += 1
-            while i < len(args) and not args[i].startswith("-"):
-                dirs.append(args[i])
-                i += 1
-        elif args[i] == "-f":
-            i += 1
-            if i < len(args):
-                file_name = args[i]
-                i += 1
+    _ = 0
+    while _ < len(args):
+        if args[_] == "-d":
+            _ += 1
+            while _ < len(args) and not args[_].startswith("-"):
+                dirs.append(args[_])
+                _ += 1
+        elif args[_] == "-f":
+            _ += 1
+            if _ < len(args):
+                file_name = args[_]
+                _ += 1
         else:
-            i += 1
+            _ += 1
 
     dir_path = ""
     if dirs:
