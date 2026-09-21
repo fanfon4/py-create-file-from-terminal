@@ -40,7 +40,8 @@ def create_file() -> None:
             lines.append(line)
 
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        file_is_not_empty = os.path.exists(filepath) and os.path.getsize(filepath) > 0
+        file_is_not_empty = (os.path.exists(filepath)
+                             and os.path.getsize(filepath) > 0)
 
         with open(filepath, "a") as f:
             if file_is_not_empty:
